@@ -1,8 +1,11 @@
+import 'package:app_tesis_sociales/src/views/pages/teoria_celular/teoria_celular_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import '../celula_animal_y_vegeltal/celula_animavegetal_page.dart';
 import '../descubrimiento_celula/descubrimiento_celula.dart';
+import '../estructura_celular/estructura_celular_page.dart';
 import '../niveles_organizacion/niveles_organizacion_home.dart';
 import '../quizz/quizz_page.dart';
 import 'items.dart';
@@ -19,11 +22,11 @@ class _SeresVivosHomeState extends State<SeresVivosHome> with SingleTickerProvid
 
   @override
   void initState() {
-    tabController = TabController(vsync: this, length:6);
+    tabController = TabController(vsync: this, length: 6);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitDown,
       DeviceOrientation.portraitUp,
-    ]); 
+    ]);
     super.initState();
   }
 
@@ -71,7 +74,6 @@ class _SeresVivosHomeState extends State<SeresVivosHome> with SingleTickerProvid
                 ),
               ),
             ),
-            
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
               child: TabBar(
@@ -121,7 +123,7 @@ class _SeresVivosHomeState extends State<SeresVivosHome> with SingleTickerProvid
                       ),
                     ),
                   ),
-                    Tab(
+                  Tab(
                     child: Text(
                       'La estructura celular',
                       style: TextStyle(
@@ -145,33 +147,19 @@ class _SeresVivosHomeState extends State<SeresVivosHome> with SingleTickerProvid
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height - 350.0,
+              height: MediaQuery.of(context).size.height - 300.0,
               child: TabBarView(
                 controller: tabController,
-                children: const [
-                  ItemsPage(),
+                children:  const [
+                   ItemsPage(), //Seres vivo HomePage
                   NivelesOrganizacionHomePage(),
                   DescubrimientoCelulaPage(),
-                  NivelesOrganizacionHomePage(),
-                  NivelesOrganizacionHomePage(),
-                  NivelesOrganizacionHomePage(),
+                  TeoriaCelularPage(),
+                  EstructuraCelularPage(),
+                  CelulaAnimalVegatalPage(),
                 ],
               ),
             ),
-             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:24.0),
-              child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 20),
-                primary: const Color(0xFF399D63),
-              ),
-              onPressed: () {
-                Get.to(() => const QuizzPage());
-              },
-              child: const Text('Ir al quizz'),
-            ),
-            ),
-            
           ],
         ),
       ),

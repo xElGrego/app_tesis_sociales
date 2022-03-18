@@ -6,14 +6,14 @@ import 'package:get/get.dart';
 import '../seres_vivos/detalle_page.dart';
 
 
-class DescubrimientoCelulaPage extends StatefulWidget {
-  const DescubrimientoCelulaPage({Key? key}) : super(key: key);
+class CelulaAnimalVegatalPage extends StatefulWidget {
+  const CelulaAnimalVegatalPage({Key? key}) : super(key: key);
 
   @override
-  _DescubrimientoCelulaPageState createState() => _DescubrimientoCelulaPageState();
+  _CelulaAnimalVegatalPageState createState() => _CelulaAnimalVegatalPageState();
 }
 
-class _DescubrimientoCelulaPageState extends State<DescubrimientoCelulaPage> {
+class _CelulaAnimalVegatalPageState extends State<CelulaAnimalVegatalPage> {
   late ScrollController _scrollController;
 
   @override

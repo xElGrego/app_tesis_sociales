@@ -195,7 +195,7 @@ class _ItemsPageState extends State<ItemsPage> {
                             color: Colors.white,
                             onPressed: () {
                               Get.to(
-                                DetallePage(seresVivosList[index]),
+                                DetalleSeresVivosPage(seresVivosList[index]),
                               );
                             },
                           ),

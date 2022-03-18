@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'data.dart';
 
-class DetallePage extends StatelessWidget {
+class DetalleSeresVivosPage extends StatelessWidget {
   final SeresVivos seresVivos;
   // ignore: use_key_in_widget_constructors
-  const DetallePage(this.seresVivos);
+  const DetalleSeresVivosPage(this.seresVivos);
 
   @override
   Widget build(BuildContext context) {
@@ -126,20 +126,20 @@ class DetallePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 255.0,
+                top: (MediaQuery.of(context).size.height / 2) - 205.0,
                 left: (MediaQuery.of(context).size.width / 2) - 45.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(seresVivos.image),
-                    fit: BoxFit.cover,
-                    height: 150.0,
+                    fit: BoxFit.contain,
+                    height:  MediaQuery.of(context).size.height - 510,
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height - 350.0,
+                  top: MediaQuery.of(context).size.height - 320.0,
                   left: 20.0,
                   right: 15.0,
                 ),
