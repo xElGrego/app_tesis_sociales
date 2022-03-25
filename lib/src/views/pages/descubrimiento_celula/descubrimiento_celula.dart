@@ -1,9 +1,9 @@
 
-import 'package:app_tesis_sociales/src/views/pages/seres_vivos/data.dart';
+import 'package:app_tesis_sociales/src/views/pages/descubrimiento_celula/detalle_descrubrimiento.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../seres_vivos/detalle_page.dart';
+import 'data_descubrimiento.dart';
 
 
 class DescubrimientoCelulaPage extends StatefulWidget {
@@ -36,7 +36,7 @@ class _DescubrimientoCelulaPageState extends State<DescubrimientoCelulaPage> {
         SizedBox(
           height:350.0,
           child: ListView.builder(
-            itemCount: seresVivosList.length,
+            itemCount: descubrimientoCelulaList.length,
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
@@ -61,7 +61,7 @@ class _DescubrimientoCelulaPageState extends State<DescubrimientoCelulaPage> {
                               borderRadius: BorderRadius.circular(25),
                               child: Image(
                                 image: AssetImage(
-                                  seresVivosList[index].image,
+                                  descubrimientoCelulaList[index].image,
                                 ),
                                 height: 135.0,
                               ),
@@ -82,13 +82,19 @@ class _DescubrimientoCelulaPageState extends State<DescubrimientoCelulaPage> {
                                         color: Color(0xFF8AC7A4),
                                       ),
                                     ),
-                                    Text(
-                                      seresVivosList[index].title,
-                                      style: const TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
+                                    SizedBox(
+                                      width: 190,
+                                      child: Text(
+                                        descubrimientoCelulaList[index].title,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        softWrap: false,
+                                        style: const TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     )
                                   ],
@@ -197,7 +203,7 @@ class _DescubrimientoCelulaPageState extends State<DescubrimientoCelulaPage> {
                             color: Colors.white,
                             onPressed: () {
                               Get.to(
-                                DetalleSeresVivosPage(seresVivosList[index]),
+                                DetalleDescrubrimiento(descubrimientoCelulaList[index]),
                               );
                             },
                           ),

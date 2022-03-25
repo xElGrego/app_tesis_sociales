@@ -19,14 +19,27 @@ class SplashPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover,
-              color: Colors.black.withOpacity(0.6),
+              color: Colors.black.withOpacity(0.4),
               colorBlendMode: BlendMode.darken,
             ),
             SizedBox(
-              height: 260.0,
+              height: 370.0,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: const Text(
+                      "Ciencias Naturales",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xffffb451),
+                        fontSize: 30,
+                        fontFamily: "SpecialElite",
+                      ),
+                    ),
+                  ),
+                    const SizedBox(height: 50.0),
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 2,
                     child: const Text(

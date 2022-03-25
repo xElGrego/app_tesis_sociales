@@ -1,10 +1,8 @@
-
-import 'package:app_tesis_sociales/src/views/pages/seres_vivos/data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../seres_vivos/detalle_page.dart';
-
+import 'data_estructura_celular.dart';
+import 'detalle_esctructura_celular.dart';
 
 class EstructuraCelularPage extends StatefulWidget {
   const EstructuraCelularPage({Key? key}) : super(key: key);
@@ -34,9 +32,9 @@ class _EstructuraCelularPageState extends State<EstructuraCelularPage> {
       controller: _scrollController,
       children: [
         SizedBox(
-          height:350.0,
+          height: 350.0,
           child: ListView.builder(
-            itemCount: seresVivosList.length,
+            itemCount: dataEstructuraCelularList.length,
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
@@ -61,7 +59,7 @@ class _EstructuraCelularPageState extends State<EstructuraCelularPage> {
                               borderRadius: BorderRadius.circular(25),
                               child: Image(
                                 image: AssetImage(
-                                  seresVivosList[index].image,
+                                  dataEstructuraCelularList[index].image,
                                 ),
                                 height: 135.0,
                               ),
@@ -82,13 +80,19 @@ class _EstructuraCelularPageState extends State<EstructuraCelularPage> {
                                         color: Color(0xFF8AC7A4),
                                       ),
                                     ),
-                                    Text(
-                                      seresVivosList[index].title,
-                                      style: const TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
+                                    SizedBox(
+                                      width: 190,
+                                      child: Text(
+                                        dataEstructuraCelularList[index].title,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        softWrap: false,
+                                        style: const TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     )
                                   ],
@@ -197,7 +201,7 @@ class _EstructuraCelularPageState extends State<EstructuraCelularPage> {
                             color: Colors.white,
                             onPressed: () {
                               Get.to(
-                                DetalleSeresVivosPage(seresVivosList[index]),
+                                DetalleEstructuraCelular(dataEstructuraCelularList[index]),
                               );
                             },
                           ),

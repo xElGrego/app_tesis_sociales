@@ -67,6 +67,11 @@ flutter:
    - assets/fotos/
    - assets/seres_vivos/
    - assets/homepage/
+   - assets/estructura_celular/
+   - assets/niveles_organizacion/
+   - assets/descubrimiento_celula/
+   - assets/teoria_celular/
+   - assets/animal_vegetal/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

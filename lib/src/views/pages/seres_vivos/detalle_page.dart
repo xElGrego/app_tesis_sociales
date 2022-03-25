@@ -126,8 +126,8 @@ class DetalleSeresVivosPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 205.0,
-                left: (MediaQuery.of(context).size.width / 2) - 45.0,
+                top: (MediaQuery.of(context).size.height / 2) - 215.0,
+                left: (MediaQuery.of(context).size.width / 2) - 115.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(

@@ -1,9 +1,11 @@
+import 'package:app_tesis_sociales/src/config/config.dart';
+import 'package:app_tesis_sociales/src/views/pages/niveles_organizacion/data_organizacion.dart';
+import 'package:app_tesis_sociales/src/views/pages/niveles_organizacion/niveles_detalles.dart';
 import 'package:app_tesis_sociales/src/views/pages/seres_vivos/data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../seres_vivos/detalle_page.dart';
-
 
 class NivelesOrganizacionHomePage extends StatefulWidget {
   const NivelesOrganizacionHomePage({Key? key}) : super(key: key);
@@ -33,9 +35,9 @@ class _NivelesOrganizacionHomePageState extends State<NivelesOrganizacionHomePag
       controller: _scrollController,
       children: [
         SizedBox(
-          height:350.0,
+          height: 350.0,
           child: ListView.builder(
-            itemCount: seresVivosList.length,
+            itemCount: nivelesOrganizacionList.length,
             padding: const EdgeInsets.only(left: 25.0),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
@@ -52,7 +54,7 @@ class _NivelesOrganizacionHomePageState extends State<NivelesOrganizacionHomePag
                           color: const Color(0xFF399D63),
                         ),
                         height: 250.0,
-                        width: 225.0,
+                        width: 255.0,
                         child: Column(
                           children: <Widget>[
                             const SizedBox(height: 20.0),
@@ -60,7 +62,7 @@ class _NivelesOrganizacionHomePageState extends State<NivelesOrganizacionHomePag
                               borderRadius: BorderRadius.circular(25),
                               child: Image(
                                 image: AssetImage(
-                                  seresVivosList[index].image,
+                                  nivelesOrganizacionList[index].image,
                                 ),
                                 height: 135.0,
                               ),
@@ -81,15 +83,21 @@ class _NivelesOrganizacionHomePageState extends State<NivelesOrganizacionHomePag
                                         color: Color(0xFF8AC7A4),
                                       ),
                                     ),
-                                    Text(
-                                      seresVivosList[index].title,
-                                      style: const TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontSize: 20.0,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
+                                    SizedBox(
+                                      width:190,
+                                      child: Text(
+                                        nivelesOrganizacionList[index].title,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        softWrap: false,
+                                        style: const TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ],
@@ -196,7 +204,7 @@ class _NivelesOrganizacionHomePageState extends State<NivelesOrganizacionHomePag
                             color: Colors.white,
                             onPressed: () {
                               Get.to(
-                                DetalleSeresVivosPage(seresVivosList[index]),
+                                DetalleNiveles(nivelesOrganizacionList[index]),
                               );
                             },
                           ),
