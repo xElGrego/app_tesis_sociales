@@ -10,15 +10,10 @@ class MyApp extends StatelessWidget {
   
   const MyApp({Key? key}) : super(key: key);
 
-
- void initState() {
-        
-  }
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Tesis Sociales',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: route.controller,
       theme: ThemeData(

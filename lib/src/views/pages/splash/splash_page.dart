@@ -23,10 +23,19 @@ class SplashPage extends StatelessWidget {
               colorBlendMode: BlendMode.darken,
             ),
             SizedBox(
-              height: 370.0,
+              height: 650.0,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
+                   SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: const Text(
+                      "Universidad de Guayaquil",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color(0xffffb451), fontSize: 30, fontFamily: "SpecialElite"),
+                    ),
+                  ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: const Text(
@@ -39,32 +48,7 @@ class SplashPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                    const SizedBox(height: 50.0),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 2,
-                    child: const Text(
-                      "Aplicación de Adriana Alcivar",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xffffb451),
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 10.0),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: const Text(
-                      "Universidad de Guayaquil",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Color(0xffffb451), fontSize: 30, fontFamily: "SpecialElite"),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 80.0,
-                  ),
+                  const SizedBox(height: 180.0),
                   ButtonTheme(
                     minWidth: MediaQuery.of(context).size.width / 1.5,
                     height: 50.0,
@@ -86,7 +70,23 @@ class SplashPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 5.0),
+                   const SizedBox(height: 210.0),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: const Text(
+                        "Autor: Adriana Alcivar",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xffffb451),
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
                 ],
               ),
             ),

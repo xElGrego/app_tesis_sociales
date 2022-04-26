@@ -45,22 +45,6 @@ class DetalleSeresVivosPage extends StatelessWidget {
                 ),
               ),
 
-              /*  Positioned(
-                top: 10.0,
-                left: MediaQuery.of(context).size.width - 30.0,
-                child: Container(
-                  height: 18.0,
-                  width: 18.0,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(9.0), color: Colors.white),
-                  child: const Center(
-                    child: Text(
-                      '1',
-                      style: TextStyle(color: Color(0xFF399D63), fontFamily: 'Montserrat'),
-                    ),
-                  ),
-                ),
-              ), */
               Padding(
                 padding: const EdgeInsets.only(left: 25.0, top: 60.0),
                 child: Column(
@@ -84,56 +68,20 @@ class DetalleSeresVivosPage extends StatelessWidget {
                           color: Colors.white),
                     ),
                     const SizedBox(height: 15.0),
-                   /*  const Text(
-                      'FROM',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF8AC7A4),
-                      ),
-                    ),
-                    const Text(
-                      '\$30',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 15.0),
-                    const Text(
-                      'SIZES',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF8AC7A4),
-                      ),
-                    ),
-                    const Text(
-                      'Small',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
-                      ),
-                    ), */
-                    const SizedBox(height: 10.0),
+    
                   ],
                 ),
               ),
+              
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 215.0,
-                left: (MediaQuery.of(context).size.width / 2) - 115.0,
+                top: (MediaQuery.of(context).size.height / 2) - 195.0,
+                left: (MediaQuery.of(context).size.width / 2) - 95.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(seresVivos.image),
-                    fit: BoxFit.contain,
-                    height:  MediaQuery.of(context).size.height - 510,
+                    fit: BoxFit.cover,
+                    height:  MediaQuery.of(context).size.height - 470,
                   ),
                 ),
               ),

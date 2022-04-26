@@ -126,14 +126,14 @@ class DetalleNiveles extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 150.0,
-                left: (MediaQuery.of(context).size.width / 2) - 40.0,
+                top: (MediaQuery.of(context).size.height / 2) - 190.0,
+                left: (MediaQuery.of(context).size.width / 2) - 80.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(detalleNiveles.image),
                     fit: BoxFit.contain,
-                    height:  MediaQuery.of(context).size.height - 530,
+                    height:  MediaQuery.of(context).size.height - 680,
                   ),
                 ),
               ),

@@ -126,20 +126,20 @@ class TeoriaCelularDetalle extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 175.0,
-                left: (MediaQuery.of(context).size.width / 2) - 45.0,
+                top: (MediaQuery.of(context).size.height / 2) - 255.0,
+                left: (MediaQuery.of(context).size.width / 2) - 105.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(teoriaCelularDetalle.image),
                     fit: BoxFit.contain,
-                    height:  MediaQuery.of(context).size.height - 510,
+                    height:  MediaQuery.of(context).size.height - 650,
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height - 320.0,
+                  top: MediaQuery.of(context).size.height - 400.0,
                   left: 20.0,
                   right: 15.0,
                 ),

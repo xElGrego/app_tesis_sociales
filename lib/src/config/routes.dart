@@ -19,6 +19,8 @@ Route<dynamic> controller(RouteSettings settings) {
     case contentPage:
       return MaterialPageRoute(builder: (context) => const SeresVivosHome());
 
+
+    
     default:
       throw ('This route name does not exit');
   }

@@ -32,7 +32,7 @@ class _ItemsPageState extends State<ItemsPage> {
       controller: _scrollController,
       children: [
         SizedBox(
-          height:350.0,
+          height:310.0,
           child: ListView.builder(
             itemCount: seresVivosList.length,
             padding: const EdgeInsets.only(left: 25.0),

@@ -126,14 +126,14 @@ class DetalleDescrubrimiento extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 195.0,
-                left: (MediaQuery.of(context).size.width / 2) - 45.0,
+                top: (MediaQuery.of(context).size.height / 2) - 245.0,
+                left: (MediaQuery.of(context).size.width / 2) - 155.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(detalleDescrubrimiento.image),
                     fit: BoxFit.contain,
-                    height:  MediaQuery.of(context).size.height - 510,
+                    height:  MediaQuery.of(context).size.height - 640,
                   ),
                 ),
               ),

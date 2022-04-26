@@ -62,7 +62,7 @@ class DetalleEstructuraCelular extends StatelessWidget {
                 ),
               ), */
               Padding(
-                padding: const EdgeInsets.only(left: 45.0, top: 10.0),
+                padding: const EdgeInsets.only(left: 45.0, top: 40.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -127,20 +127,20 @@ class DetalleEstructuraCelular extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: (MediaQuery.of(context).size.height / 2) - 180.0,
-                left: (MediaQuery.of(context).size.width / 2) - 80.0,
+                top: (MediaQuery.of(context).size.height / 2) - 250.0,
+                left: (MediaQuery.of(context).size.width / 2) -170.0,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(
                     image: AssetImage(detalleEstructuraCelular.image),
                     fit: BoxFit.contain,
-                    height: MediaQuery.of(context).size.height - 510,
+                    height: MediaQuery.of(context).size.height - 650,
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height - 320.0,
+                  top: MediaQuery.of(context).size.height - 380.0,
                   left: 20.0,
                   right: 15.0,
                 ),
